@@ -1,6 +1,6 @@
 # (SECUREVERIFY) - Secure Digital Document Verification System
 
-A lightweight, zero-knowledge web application designed to mathematically prove the authenticity of digital academic and professional documents without storing the physical files.
+A lightweight, zero-knowledge web application designed to mathematically prove the authenticity of digital academic and professional documents without storing the physical files using SHA-256.
 
 ## 🚀 Features
 * **Zero-Knowledge Architecture:** Validates documents without storing sensitive files.
