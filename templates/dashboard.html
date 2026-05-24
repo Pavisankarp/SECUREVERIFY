@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 10px; color: #00d2ff;">Admin Dashboard</h2>
+    <p style="color: #aaa; margin-bottom: 40px;">Select an action to proceed.</p>
+
+    <div style="display: flex; gap: 30px; justify-content: center; align-items: stretch; flex-wrap: wrap; width: 100%; max-width: 800px;">
+        
+        <div class="card" style="width: 100%; max-width: 300px; padding: 40px 20px; display: flex; flex-direction: column; justify-content: space-between; margin: 0; border-top: 4px solid #00d2ff;">
+            <div>
+                <h1 style="font-size: 3rem; margin-bottom: 15px;">📄</h1>
+                <h3 style="color: white; margin-bottom: 10px;">Register Document</h3>
+                <p style="font-size: 0.8rem; color: #aaa; margin-bottom: 20px;">Store a new hash.</p>
+            </div>
+            <form action="/register" method="GET" style="margin: 0; width: 100%;">
+                <button type="submit" style="margin: 0;">Register</button>
+            </form>
+        </div>
+
+        <div class="card" style="width: 100%; max-width: 300px; padding: 40px 20px; border-top: 4px solid #00d2ff; display: flex; flex-direction: column; justify-content: space-between; margin: 0;">
+            <div>
+                <h1 style="font-size: 3rem; margin-bottom: 15px;">🗑️</h1>
+                <h3 style="color: white; margin-bottom: 10px;">Delete Misentry</h3>
+                <p style="font-size: 0.8rem; color: #aaa; margin-bottom: 20px;">Remove a record.</p>
+            </div>
+            <form action="/delete" method="GET" style="margin: 0; width: 100%;">
+                <button type="submit" style="margin: 0;">Delete</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

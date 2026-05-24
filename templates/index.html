@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
+    <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 10px;">Document Authentication System</h1>
+    <p class="hero-subtitle" style="color: #ccc; margin-bottom: 40px;">Select your portal to continue.</p>
+
+    <div style="display: flex; gap: 30px; justify-content: center; align-items: stretch; flex-wrap: wrap; width: 100%; max-width: 800px;">
+        
+        <div class="card" style="width: 100%; max-width: 320px; padding: 40px 20px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #00d2ff; margin: 0;">
+            <div>
+                <h1 style="font-size: 3rem; margin-bottom: 15px;">🛡️</h1>
+                <h2 style="color: white; margin-bottom: 10px;">Admin Portal</h2>
+                <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 25px;">Register new documents or delete misentries.</p>
+            </div>
+            <form action="/login" method="GET" style="margin: 0; width: 100%;">
+                <button type="submit" style="margin: 0;">Proceed as Admin</button>
+            </form>
+        </div>
+
+        <div class="card" style="width: 100%; max-width: 320px; padding: 40px 20px; border-top: 4px solid #00d2ff; display: flex; flex-direction: column; justify-content: space-between; margin: 0;">
+            <div>
+                <h1 style="font-size: 3rem; margin-bottom: 15px;">🔍</h1>
+                <h2 style="color: white; margin-bottom: 10px;">User Portal</h2>
+                <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 25px;">Upload a document to verify its authenticity.</p>
+            </div>
+            <form action="/verify" method="GET" style="margin: 0; width: 100%;">
+                <button type="submit" style="margin: 0;">Proceed as User</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<a href="/team" class="btn-about-team">👥 About Team</a>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVerify - Document Authentication</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/" style="color: #00d2ff; text-decoration: none;">🔐 SecureVerify</a>
+        </div>
+        <div class="nav-links">
+            {% if session.get('is_admin') %}
+                <a href="/dashboard" style="color: #00d2ff; margin-right: 15px;">Dashboard</a>
+                <a href="/logout" style="color: #ff5252; font-weight: bold; border: 1px solid #ff5252; padding: 5px 15px; border-radius: 20px;">Logout</a>
+            {% endif %}
+        </div>
+    </nav>
+    
+    {% block content %}{% endblock %}
+</body>
+</html>

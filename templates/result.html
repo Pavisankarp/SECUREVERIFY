@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="card">
+        <h2>Status</h2>
+        
+        <div style="margin: 30px 0; line-height: 1.6;">
+            {% if status == 'success' %}
+                <div class="status-success">{{ message }}</div>
+            {% elif status == 'error' %}
+                <div class="status-error">{{ message }}</div>
+            {% else %}
+                <div class="status-warning">{{ message }}</div>
+            {% endif %}
+        </div>
+
+        <a href="{{ back_url }}" class="btn-back">Back to Previous Page</a>
+    </div>
+</div>
+{% endblock %}

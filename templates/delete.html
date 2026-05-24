@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+    
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 450px;">
+        
+        <div class="card" style="width: 100%; border: 1px solid #ff5252; margin-bottom: 15px;">
+            <h2 style="color: #ff5252;">Delete Misentry</h2>
+            <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 20px;">Permanently remove an entry.</p>
+            <form action="/delete" method="POST">
+                <input type="text" name="reg_no" placeholder="Reg Number to Remove" required>
+                <select name="document_type" required>
+                    <option value="" disabled selected>Select Document Type</option>
+                    <option value="TC">TC</option>
+                    <option value="Marksheet">Marksheet</option>
+                </select>
+                <button type="submit" style="background: #ff5252; color: white;">Permanently Delete</button>
+            </form>
+        </div>
+
+        <a href="/dashboard" style="color: #888; text-decoration: none; font-size: 0.95rem; margin-top: 10px;">← Back to Dashboard</a>
+        
+    </div>
+
+</div>
+{% endblock %}
